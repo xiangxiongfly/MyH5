@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style>
+			#div1 div,
+			#div2 div,
+			#div3 div {
+				width: 200px;
+				height: 200px;
+				border: 1px #000 solid;
+				display: none;
+			}
+
+			.active {
+				background: red;
+			}
+		</style>
+		<script>
+			window.onload = function() {
+				//创建第一个选项卡并初始化选项卡
+				var t1 = new Tab('div1');
+				t1.init();
+				//创建第二个选项卡并初始化选项卡
+				var t2 = new Tab('div2');
+				t2.init();
+				//创建第三个选项卡并初始化选项卡，同时实现选项卡自动播放
+				var t3 = new Tab('div3');
+				t3.init();
+				t3.autoPlay();
+			};
+			//定义构造函数
+			function Tab(id) {
+				this.oParent = document.getElementById(id);
+				this.aInput = this.oParent.getElementsByTagName('input');
+				this.aDiv = this.oParent.getElementsByTagName('div');
+				this.iNow = 0;
+			}
+			//定义原型方法，实现初始化选项卡
+			Tab.prototype.init = function() {
+				var that = this;
+				for (var i = 0; i < this.aInput.length; i++) {
+					this.aInput[i].index = i;
+					this.aInput[i].onclick = function() {
+						that.change(this);
+					};
+				}
+			};
+			//定义原型方法，实现选项卡切换
+			Tab.prototype.change = function(obj) {
+				for (var i = 0; i < this.aInput.length; i++) {
+					this.aInput[i].className = '';
+					this.aDiv[i].style.display = 'none';
+				}
+				obj.className = 'active';
+				this.aDiv[obj.index].style.display = 'block';
+			};
+			//定义原型方法，实现选项卡自动播放
+			Tab.prototype.autoPlay = function() {
+				var that = this;
+				//定义定时器每隔2s自动切换选项卡
+				setInterval(function() {
+					//如果选项卡切换到最后一个，则下次播放时回到第一个选项卡，否则依次切换选项卡
+					if (that.iNow == that.aInput.length - 1) {
+						that.iNow = 0;
+					} else {
+						that.iNow++;
+					}
+					//设置选项卡及其对应的DIV样式
+					for (var i = 0; i < that.aInput.length; i++) {
+						that.aInput[i].className = '';
+						that.aDiv[i].style.display = 'none';
+					}
+					that.aInput[that.iNow].className = 'active';
+					that.aDiv[that.iNow].style.display = 'block';
+				}, 2000);
+			};
+		</script>
+	</head>
+	<body>
+
+		<body>
+			<div id="div1">
+				<input class="active" type="button" value="1">
+				<input type="button" value="2">
+				<input type="button" value="3">
+				<div style="display:block">11111</div>
+				<div>22222</div>
+				<div>33333</div>
+			</div>
+
+			<div id="div2">
+				<input class="active" type="button" value="1">
+				<input type="button" value="2">
+				<input type="button" value="3">
+				<div style="display:block">11111</div>
+				<div>22222</div>
+				<div>33333</div>
+			</div>
+
+			<div id="div3">
+				<input class="active" type="button" value="1">
+				<input type="button" value="2">
+				<input type="button" value="3">
+				<div style="display:block">11111</div>
+				<div>22222</div>
+				<div>33333</div>
+			</div>
+		</body>
+	</body>
+</html>
