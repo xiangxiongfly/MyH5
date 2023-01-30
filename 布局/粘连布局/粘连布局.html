@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>粘连布局</title>
+		<style type="text/css">
+			* {
+				margin: 0;
+				padding: 0;
+			}
+
+			html,
+			body {
+				height: 100%;
+			}
+
+			.content {
+				min-height: 100%;
+				background-color: lightgrey;
+				text-align: center;
+				overflow: hidden;
+			}
+
+			.content .main {
+				padding-bottom: 50px;
+			}
+
+			.footer {
+				height: 50px;
+				line-height: 50px;
+				background-color: aliceblue;
+				text-align: center;
+				margin-top: -50px;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="content">
+			<div class="main">main</div>
+		</div>
+		<div class="footer">footer</div>
+	</body>
+</html>
