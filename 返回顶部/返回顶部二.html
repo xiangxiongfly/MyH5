@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>返回顶部</title>
+    <style type="text/css">
+      body {
+        height: 5000px;
+      }
+
+      img {
+        position: fixed;
+        right: 50px;
+        bottom: 50px;
+        width: 80px;
+        display: none;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <h3>hello world2</h3>
+    <div><img src="../img/toTop.png" alt="" /></div>
+    <script>
+      let btnTop = document.querySelector("img");
+      window.onscroll = function () {
+        let scrollTop =
+          document.body.scrollTop || document.documentElement.scrollTop;
+        if (scrollTop > 300) {
+          btnTop.style.display = "block";
+        } else {
+          btnTop.style.display = "none";
+        }
+      };
+      let request;
+      function scrollTopAnim() {
+        let height =
+          document.body.scrollTop || document.documentElement.scrollTop;
+        if (height <= 1) {
+          window.cancelAnimationFrame(request);
+          window.scrollTo(0, 0);
+          return;
+        }
+        //浏览器页面每次重绘时，会调用该方法
+        request = window.requestAnimationFrame(scrollTopAnim);
+        window.scrollTo(0, height - height / 8);
+      }
+      btnTop.addEventListener("click", () => {
+        scrollTopAnim();
+      });
+    </script>
+  </body>
+</html>

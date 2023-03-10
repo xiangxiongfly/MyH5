@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>获取当月的第一天和最后一天</title>
+  </head>
+  <body>
+    <script>
+      function getFirstAndLastDay() {
+        const fillZero = (num) => (num < 10 ? "0" + num : num);
+        const monthArr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
+        let now = new Date();
+        let y = now.getFullYear();
+        let m = now.getMonth();
+        console.log(now);
+        let firstDay = new Date(y, m, 1);
+        firstDay = fillZero(monthArr[m]) + "月" + firstDay.getDate() + "日";
+        console.log(firstDay);
+        let lastDay = new Date(y, m + 1, 0);
+        lastDay = fillZero(monthArr[m]) + "月" + lastDay.getDate() + "日";
+        console.log(lastDay);
+        return { firstDay, lastDay };
+      }
+      let obj = getFirstAndLastDay();
+      document.body.innerText =
+        "本月的第一天：" + obj.firstDay + "\n本月的最后一天：" + obj.lastDay;
+    </script>
+  </body>
+</html>

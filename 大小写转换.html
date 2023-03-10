@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>字符串大小写转换</title>
+  </head>
+  <body>
+    <h2></h2>
+    <button>转大写</button>
+    <button>转小写</button>
+    <button>首字母大写</button>
+    <script>
+      let str = "Hello World";
+      let h2 = document.querySelector("h2");
+      let btns = document.querySelectorAll("button");
+      h2.innerHTML = str;
+      const turnCase = (str, type) => {
+        switch (type) {
+          case 1:
+            return str.toUpperCase();
+          case 2:
+            return str.toLowerCase();
+          case 3:
+            return str[0].toUpperCase() + str.substr(1).toLowerCase();
+          default:
+            return str;
+        }
+      };
+      btns.forEach((item, index) => {
+        item.addEventListener("click", () => {
+          console.log(index);
+          str = turnCase(str, index + 1);
+          h2.innerHTML = str;
+        });
+      });
+    </script>
+  </body>
+</html>
