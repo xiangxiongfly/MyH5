@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>放大镜</title>
+    <link rel="stylesheet" href="./reset.css" />
+    <link rel="stylesheet" href="./index.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="top">
+        <!-- 小图框 -->
+        <div class="small_wrap">
+          <!-- 小图片 -->
+          <img class="small_img" />
+          <!-- 蒙版 -->
+          <div class="mask"></div>
+        </div>
+        <!-- 大图框 -->
+        <div class="big_wrap">
+          <img class="big_img" />
+        </div>
+      </div>
+      <div class="bottom">
+        <a class="prev" href="javascript:;">&lt;</a>
+        <div class="pic_list">
+          <ul></ul>
+        </div>
+        <a class="next" href="javascript:;">&gt;</a>
+      </div>
+    </div>
+    <script src="./data.js"></script>
+    <script src="./index.js"></script>
+  </body>
+</html>

@@ -1,0 +1,107 @@
+/* index.css */
+.container {
+    user-select: none;
+    width: 822px;
+    margin: 100px auto;
+}
+
+.top {
+    position: relative;
+}
+
+.small_wrap {
+    position: relative;
+    width: 400px;
+    height: 400px;
+    border: 1px solid #dfdfdf;
+}
+
+.small_wrap .mask {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 200px;
+    height: 200px;
+    background-color: rgba(255, 255, 255, 0.7);
+    border: 1px solid #ddd;
+    display: none;
+}
+
+.big_wrap {
+    position: absolute;
+    left: 420px;
+    top: 0;
+    width: 400px;
+    height: 400px;
+    border: 1px solid #ddd;
+    overflow: hidden;
+    display: none;
+}
+
+.small_wrap:hover+.big_wrap {
+    display: block;
+}
+
+.small_wrap:hover .mask {
+    display: block;
+}
+
+.big_wrap .big_img {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 800px;
+    height: 800px;
+}
+
+.bottom {
+    width: 400px;
+    margin-top: 5px;
+    font-size: 0;
+}
+
+.bottom .prev,
+.bottom .next {
+    float: left;
+    width: 10px;
+    height: 54px;
+    border: 1px solid #ccc;
+    background-color: #ebebeb;
+    text-align: center;
+    line-height: 54px;
+    font-size: 12px;
+}
+
+.bottom .prev {
+    margin-right: 4px;
+}
+
+.bottom .pic_list {
+    position: relative;
+    float: left;
+    width: 372px;
+    height: 56px;
+    overflow: hidden;
+}
+
+.bottom .pic_list ul {
+    position: absolute;
+    left: 0;
+    white-space: nowrap;
+    transition: all 0.2s;
+}
+
+.bottom .pic_list ul li {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    padding: 2px;
+    border: 1px solid #ccc;
+    margin-right: 20px;
+    cursor: pointer;
+}
+
+.bottom .pic_list ul li img {
+    width: 50px;
+    height: 50px;
+}
