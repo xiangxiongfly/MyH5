@@ -1,17 +1,58 @@
 // data.js
-let imageUrls = [
-  { b: "../img/phone/b1.png", s: "../img/phone/s1.png" },
-  { b: "../img/phone/b2.png", s: "../img/phone/s2.png" },
-  { b: "../img/phone/b3.png", s: "../img/phone/s3.png" },
-  { b: "../img/phone/b1.png", s: "../img/phone/s1.png" },
-  { b: "../img/phone/b2.png", s: "../img/phone/s2.png" },
-  { b: "../img/phone/b3.png", s: "../img/phone/s3.png" },
-  { b: "../img/phone/b1.png", s: "../img/phone/s1.png" },
-  { b: "../img/phone/b2.png", s: "../img/phone/s2.png" },
-  { b: "../img/phone/b3.png", s: "../img/phone/s3.png" },
-  { b: "../img/phone/b1.png", s: "../img/phone/s1.png" },
-  { b: "../img/phone/b2.png", s: "../img/phone/s2.png" },
-  { b: "../img/phone/b3.png", s: "../img/phone/s3.png" },
-  { b: "../img/phone/b1.png", s: "../img/phone/s1.png" },
-  { b: "../img/phone/b2.png", s: "../img/phone/s2.png" },
+let imageUrls = [{
+		b: "../images/phone/b1.png",
+		s: "../images/phone/s1.png"
+	},
+	{
+		b: "../images/phone/b2.png",
+		s: "../images/phone/s2.png"
+	},
+	{
+		b: "../images/phone/b3.png",
+		s: "../images/phone/s3.png"
+	},
+	{
+		b: "../images/phone/b1.png",
+		s: "../images/phone/s1.png"
+	},
+	{
+		b: "../images/phone/b2.png",
+		s: "../images/phone/s2.png"
+	},
+	{
+		b: "../images/phone/b3.png",
+		s: "../images/phone/s3.png"
+	},
+	{
+		b: "../images/phone/b1.png",
+		s: "../images/phone/s1.png"
+	},
+	{
+		b: "../images/phone/b2.png",
+		s: "../images/phone/s2.png"
+	},
+	{
+		b: "../images/phone/b3.png",
+		s: "../images/phone/s3.png"
+	},
+	{
+		b: "../images/phone/b1.png",
+		s: "../images/phone/s1.png"
+	},
+	{
+		b: "../images/phone/b2.png",
+		s: "../images/phone/s2.png"
+	},
+	{
+		b: "../images/phone/b3.png",
+		s: "../images/phone/s3.png"
+	},
+	{
+		b: "../images/phone/b1.png",
+		s: "../images/phone/s1.png"
+	},
+	{
+		b: "../images/phone/b2.png",
+		s: "../images/phone/s2.png"
+	},
 ];
