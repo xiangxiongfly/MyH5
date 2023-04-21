@@ -1,0 +1,30 @@
+body {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.header {
+    height: 48px;
+    width: 100%;
+    border-bottom: 1px solid #e8e8e8;
+}
+
+.main {
+    flex-grow: 1;
+    overflow: auto;
+}
+
+.slider {
+    margin-bottom: 20px;
+}
+
+.course {
+    margin-bottom: 10px;
+}
+
+.tabbar {
+    width: 100%;
+    height: 48px;
+    box-shadow: 0 -4px 4px rgba(0, 0, 0, 0.15);
+}
