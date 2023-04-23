@@ -27,7 +27,7 @@
 
 .course_wrap .course_list .course_item .course_name {
     height: 40px;
-    line-height: 40px;
+    line-height: 20px;
     margin-bottom: 4px;
     color: #333;
     /* 多行文字省略 */

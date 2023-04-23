@@ -1,0 +1,41 @@
+.box_item {
+    width: 100%;
+}
+
+@media(min-width:576px) {
+    .box_item {
+        width: 50%;
+    }
+}
+
+@media(min-width:768px) {
+    .box_item {
+        width: 33.333333%;
+    }
+
+    .toggle {
+        display: none;
+    }
+
+    .nav {
+        position: static;
+        height: auto;
+    }
+
+    .nav .nav_list {
+        display: flex;
+        justify-content: end;
+    }
+}
+
+@media(min-width:992px) {
+    .box_item {
+        width: 25%;
+    }
+}
+
+@media(min-width:1200px) {
+    .box_item {
+        width: 16.666667%;
+    }
+}
