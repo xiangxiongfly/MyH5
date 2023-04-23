@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>vw布局方式</title>
+    <link rel="stylesheet" href="./css/reset.css" />
+    <link rel="stylesheet" href="./css/layout.css" />
+    <link rel="stylesheet" href="./css/header.css" />
+    <link rel="stylesheet" href="./css/slider.css" />
+    <link rel="stylesheet" href="./css/course.css" />
+    <link rel="stylesheet" href="./css/tabbar.css" />
+    <link rel="stylesheet" href="./fonts/iconfont/iconfont.css" />
+  </head>
+  <body>
+    <!-- header start -->
+    <header class="header">
+      <div class="header_wrap">
+        <a href="javascript:;" class="logo">
+          <img src="./images/logo.png" alt="logo" class="logo_img" />
+        </a>
+        <button class="header_toggle" id="header_toggle">
+          <span class="toggle_bar"></span>
+          <span class="toggle_bar"></span>
+          <span class="toggle_bar"></span>
+        </button>
+      </div>
+    </header>
+    <!-- header end -->
+
+    <!-- main start -->
+    <div class="main">
+      <!-- 幻灯片 start -->
+      <div class="slider">
+        <img src="./images/slider/1.jpg" alt="" />
+      </div>
+      <!-- 幻灯片 end -->
+
+      <!-- 免费课程 start -->
+      <div class="course">
+        <div class="course_wrap">
+          <h2 class="course_title">免费课程</h2>
+          <ul class="course_list" id="free_course">
+            <!-- <li class="course_item">
+              <a href="javascript:;">
+                <img src="./images/course_free/1.jpg" class="course_img" />
+                <p class="course_name">初识 HTML(5) + CSS(3) - 2020升级版</p>
+                <p class="course_price">免费</p>
+              </a>
+            </li> -->
+          </ul>
+        </div>
+      </div>
+      <!-- 免费课程 end -->
+
+      <!-- 实战课程 start -->
+      <div class="course">
+        <div class="course_wrap">
+          <h2 class="course_title">实战课程</h2>
+          <ul class="course_list" id="coding_course">
+            <!-- <li class="course_item">
+              <a href="javascript:;">
+                <img src="./images/course_coding/1.jpg" class="course_img" />
+                <p class="course_name">初识 HTML(5) + CSS(3) - 2020升级版</p>
+                <p class="course_price">免费</p>
+              </a>
+            </li> -->
+          </ul>
+        </div>
+      </div>
+      <!-- 实战课程 end -->
+    </div>
+    <!-- main end -->
+
+    <!-- tabbar start -->
+    <div class="tabbar">
+      <div class="tabbar_wrap">
+        <a href="javascript:;" class="tabbar_item active">
+          <i class="iconfont icon-home"></i>
+          <span>首页</span>
+        </a>
+        <a href="javascript:;" class="tabbar_item">
+          <i class="iconfont icon-search"></i>
+          <span>搜索</span>
+        </a>
+        <a href="javascript:;" class="tabbar_item">
+          <i class="iconfont icon-personal"></i>
+          <span>我的</span>
+        </a>
+      </div>
+    </div>
+    <!-- tabbar end -->
+
+    <script src="./js/loadCourse.js"></script>
+  </body>
+</html>

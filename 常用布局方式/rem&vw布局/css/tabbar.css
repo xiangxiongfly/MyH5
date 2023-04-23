@@ -1,0 +1,24 @@
+.tabbar_wrap {
+    display: flex;
+    height: 100%;
+    background-color: #f6f6f6;
+    font-size: 14px;
+}
+
+.tabbar_wrap .tabbar_item {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #c2cfcc;
+}
+
+.tabbar_wrap .tabbar_item.active {
+    color: #00b38a;
+    background-color: #e7f3f0;
+}
+
+.tabbar_wrap .tabbar_item .iconfont {
+    font-size: 5.3333vw;
+}

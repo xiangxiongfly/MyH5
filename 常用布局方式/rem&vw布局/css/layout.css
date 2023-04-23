@@ -6,7 +6,7 @@ body {
 
 .header {
     flex-shrink: 0;
-    height: 48px;
+    height: 12.8vw;
     width: 100%;
     border-bottom: 1px solid #e8e8e8;
 }
@@ -27,6 +27,6 @@ body {
 .tabbar {
     flex-shrink: 0;
     width: 100%;
-    height: 48px;
+    height: 12.8vw;
     box-shadow: 0 -4px 4px rgba(0, 0, 0, 0.15);
 }
