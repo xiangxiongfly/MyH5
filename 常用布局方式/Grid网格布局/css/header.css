@@ -1,0 +1,33 @@
+.header_wrap {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 100%;
+    align-items: center;
+    height: 100%;
+    background-color: #fff;
+    padding: 0 20px;
+}
+
+.header_wrap .logo .logo_img {
+    /* 图片等比例缩放 */
+    height: 30px;
+}
+
+.header_wrap .header_toggle {
+    justify-self: end;
+    padding: 10px;
+    border-radius: 4px;
+    margin-top: 4px;
+}
+
+.header_wrap .header_toggle .toggle_bar {
+    display: block;
+    width: 24px;
+    height: 2px;
+    background-color: #363636;
+    border-radius: 2px;
+}
+
+.toggle_bar+.toggle_bar {
+    margin-top: 4px;
+}
