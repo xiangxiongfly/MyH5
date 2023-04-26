@@ -14,7 +14,6 @@
         display: flex;
         flex-direction: column;
         height: 100vh;
-        text-align: center;
       }
       .header,
       .footer {
@@ -37,15 +36,20 @@
         width: 200px;
         background-color: blue;
       }
+      .flex-center {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
     </style>
   </head>
   <body>
-    <header class="header">header</header>
+    <header class="header flex-center">header</header>
     <div class="main">
-      <div class="left">left</div>
-      <div class="center">center</div>
-      <div class="right">right</div>
+      <div class="left flex-center">left</div>
+      <div class="center flex-center">center</div>
+      <div class="right flex-center">right</div>
     </div>
-    <footer class="footer">footer</footer>
+    <footer class="footer flex-center">footer</footer>
   </body>
 </html>
