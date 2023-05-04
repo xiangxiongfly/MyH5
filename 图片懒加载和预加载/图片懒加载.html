@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>图片懒加载</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+      }
+      img {
+        width: 100%;
+        height: 300px;
+        border: 1px solid red;
+      }
+    </style>
+  </head>
+  <body>
+    <img
+      src="../images/loading.gif"
+      data-src="../images/fruit/apple_pic.png"
+      class="lazyload" />
+    <img
+      src="../images/loading.gif"
+      data-src="../images/fruit/banana_pic.png"
+      class="lazyload" />
+    <img
+      src="../images/loading.gif"
+      data-src="../images/fruit/cherry_pic.png"
+      class="lazyload" />
+    <img
+      src="../images/loading.gif"
+      data-src="../images/fruit/grape_pic.png"
+      class="lazyload" />
+    <img
+      src="../images/loading.gif"
+      data-src="../images/fruit/mango_pic.png"
+      class="lazyload" />
+    <img
+      src="../images/loading.gif"
+      data-src="../images/fruit/orange_pic.png"
+      class="lazyload" />
+    <img
+      src="../images/loading.gif"
+      data-src="../images/fruit/pear_pic.png"
+      class="lazyload" />
+
+    <script>
+      const imgs = [...document.querySelectorAll(".lazyload")];
+
+      window.addEventListener("scroll", () => {
+        debounce(lazyLoad);
+      });
+
+      lazyLoad();
+
+      // 懒加载
+      function lazyLoad() {
+        for (let i = 0; i < imgs.length; i++) {
+          const img = imgs[i];
+          const r = imgs[0].getBoundingClientRect();
+          if (isVisibleArea(img, i)) {
+            img.src = img.dataset.src;
+            imgs.splice(i, 1);
+            i--;
+          }
+        }
+      }
+
+      // 是否在可视区域
+      function isVisibleArea(el, i) {
+        const rect = el.getBoundingClientRect();
+        return (
+          (rect.top >= 0 && rect.top <= window.innerHeight) ||
+          (rect.bottom >= 0 && rect.bottom <= window.innerHeight)
+        );
+      }
+
+      // 防抖
+      const debounce = (() => {
+        let timer = null;
+        return (callback, time = 800) => {
+          timer && clearTimeout(timer);
+          timer = setTimeout(callback, time);
+        };
+      })();
+    </script>
+  </body>
+</html>
