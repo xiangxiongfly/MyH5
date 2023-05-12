@@ -1,0 +1,13 @@
+.p1 {
+    background-image: url(images/logo.png);
+    background-repeat: no-repeat;
+    background-color: red;
+    height: 500px;
+}
+
+.p2 {
+    background-image: url(images/a.jpg);
+    background-repeat: no-repeat;
+    background-color: green;
+    height: 500px;
+}
