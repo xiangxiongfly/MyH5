@@ -1,0 +1,19 @@
+{
+  "name": "webpack_html_image",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "webpack": "webpack"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "file-loader": "^6.0.0",
+    "html-webpack-plugin": "^4.3.0",
+    "html-withimg-loader": "^0.1.16",
+    "webpack": "^4.44.1",
+    "webpack-cli": "^3.3.12"
+  }
+}
