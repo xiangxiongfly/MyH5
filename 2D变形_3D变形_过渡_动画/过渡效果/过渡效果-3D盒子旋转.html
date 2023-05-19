@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Document</title>
+		<style>
+			* {
+				margin: 0;
+				padding: 0;
+			}
+
+			.wrapper {
+				width: 200px;
+				height: 200px;
+				margin: 100px auto;
+				perspective: 10000px;
+			}
+
+			.box {
+				width: 200px;
+				height: 200px;
+				position: relative;
+				perspective: 10000px;
+				transform-style: preserve-3d;
+				transition: all 10s ease 0s;
+			}
+
+			.wrapper:hover .box {
+				transform: rotateX(360deg) rotateY(360deg);
+			}
+
+			.box div {
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 200px;
+				height: 200px;
+			}
+
+			.box div:nth-child(1) {
+				/* 正面 */
+				background-color: rgba(219, 56, 211, 0.486);
+				transform: translateZ(100px);
+			}
+
+			.box div:nth-child(2) {
+				/* 顶面 */
+				background-color: rgba(42, 128, 199, 0.425);
+				transform: rotateX(90deg) translateZ(100px);
+			}
+
+			.box div:nth-child(3) {
+				/* 背面 */
+				background-color: rgba(56, 219, 83, 0.486);
+				transform: rotateX(180deg) translateZ(100px);
+			}
+
+			.box div:nth-child(4) {
+				/* 底面 */
+				background-color: rgba(213, 216, 32, 0.486);
+				transform: rotateX(90deg) translateZ(100px);
+			}
+
+			.box div:nth-child(5) {
+				/* 侧面 */
+				background-color: rgba(236, 82, 102, 0.486);
+				transform: rotateY(90deg) translateZ(100px);
+			}
+
+			.box div:nth-child(6) {
+				/* 侧面 */
+				background-color: rgba(119, 17, 236, 0.486);
+				transform: rotateY(-90deg) translateZ(100px);
+			}
+		</style>
+	</head>
+	<body>
+		<div class="wrapper">
+			<div class="box">
+				<div></div>
+				<div></div>
+				<div></div>
+				<div></div>
+				<div></div>
+				<div></div>
+			</div>
+		</div>
+	</body>
+</html>

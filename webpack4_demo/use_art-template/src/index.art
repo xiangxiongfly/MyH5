@@ -1,4 +1,4 @@
 <% include("./common/header.art",{data:"index头部"}) %>
 <p>index页面</p>
-<% include("./common/footer.art",{data:"index底部"}) %>
+<% include('./common/footer.art', {data:"index底部"}) %>
 data: {{ data }}

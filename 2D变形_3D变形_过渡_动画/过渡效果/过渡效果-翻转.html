@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Document</title>
+		<style>
+			* {
+				margin: 0;
+				padding: 0;
+			}
+
+			div {
+				position: relative;
+				width: 100px;
+				height: 100px;
+				margin: 100px auto;
+			}
+
+			div img {
+				position: absolute;
+				left: 0;
+				top: 0;
+				width: 100px;
+				height: 100px;
+				transition: transform 1s ease 0s;
+			}
+
+			div img:nth-child(1) {
+				z-index: 1;
+				backface-visibility: hidden;
+			}
+
+			div:hover img {
+				transform: rotateY(180deg);
+			}
+		</style>
+	</head>
+	<body>
+		<div class="box">
+			<img src="../img/dog.jpg" alt="">
+			<img src="../img/cat.jpg" alt="">
+		</div>
+	</body>
+</html>
