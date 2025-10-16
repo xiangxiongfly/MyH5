@@ -11,4 +11,4 @@ Array.from([1, 2]);
 
 class Person {}
 
-import "./index.js";
+import "./index.jquery";

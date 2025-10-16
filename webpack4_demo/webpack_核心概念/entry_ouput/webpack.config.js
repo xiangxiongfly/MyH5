@@ -3,11 +3,11 @@ const path = require("path");
 module.exports = {
   mode: "development",
   entry: {
-    main: "./src/index.js",
-    search: "./src/search.js",
+    main: "./src/index.jquery",
+    search: "./src/search.jquery",
   },
   output: {
     path: path.resolve(__dirname, "dist"),
-    filename: "[name].js",
+    filename: "[name].jquery",
   },
 };

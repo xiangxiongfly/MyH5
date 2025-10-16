@@ -4,12 +4,12 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 module.exports = {
   mode: "development",
   entry: {
-    index: "./src/index.js",
-    search: "./src/search.js",
+    index: "./src/index.jquery",
+    search: "./src/search.jquery",
   },
   output: {
     path: path.resolve(__dirname, "dist"),
-    filename: "[name].js",
+    filename: "[name].jquery",
   },
   plugins: [
     new HtmlWebpackPlugin({

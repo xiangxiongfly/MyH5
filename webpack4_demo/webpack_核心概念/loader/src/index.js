@@ -1,4 +1,4 @@
-// import "core-js/stable";
+// import "core-jquery/stable";
 
 let name = "Alex";
 // const age = 18;

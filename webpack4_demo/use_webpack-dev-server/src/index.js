@@ -1,2 +1,2 @@
 import "./index.css";
-console.log("index.js");
+console.log("index.jquery");

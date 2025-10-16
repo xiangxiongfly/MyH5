@@ -8,15 +8,15 @@ module.exports = {
   mode: "development",
   // Webpack 入口文件
   entry: {
-    index: "./src/index.js",
-    list: "./src/list.js",
+    index: "./src/index.jquery",
+    list: "./src/list.jquery",
   },
   // Webpack 输出路径
   output: {
     // 输出的目录
     path: resolve("dist"),
     // 输出的文件名
-    filename: "js/[name].js",
+    filename: "jquery/[name].jquery",
   },
   // source-map，调试用的，出错的时候，将直接定位到原始代码，而不是转换后的代码
   devtool: "cheap-module-eval-source-map",
