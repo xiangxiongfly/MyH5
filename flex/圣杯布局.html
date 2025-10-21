@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        div {
+            text-align: center;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        .header, .footer {
+            height: 100px;
+            background: #ccc;
+        }
+
+        .content {
+            display: flex;
+            flex: 1;
+        }
+
+        .left {
+            flex-basis: 200px;
+            background: lightcoral;
+        }
+
+        .right {
+            flex-basis: 200px;
+            background: lightblue;
+        }
+
+        .center {
+            flex: 1;
+            background: lightgoldenrodyellow;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="header">header</div>
+    <div class="content">
+        <div class="left">left</div>
+        <div class="center">center</div>
+        <div class="right">right</div>
+    </div>
+    <div class="footer">footer</div>
+</div>
+</body>
+</html>

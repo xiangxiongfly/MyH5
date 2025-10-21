@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .container {
+            min-height: 100vh;
+            display: grid;
+            grid-template-areas: "header header header" "left center right" "footer footer footer";
+            grid-template-columns: 1fr 2fr 1fr;
+            grid-template-rows: 100px 1fr 80px;
+            gap: 15px;
+        }
+
+        .container div {
+            padding: 25px;
+            border-radius: 6px;
+            background: #f00;
+            text-align: center;
+            display: grid;
+            justify-items: center;
+            align-items: center;
+        }
+
+        .header {
+            grid-area: header;
+        }
+
+        .left {
+            grid-area: left;
+        }
+
+        .center {
+            grid-area: center;
+        }
+
+        .right {
+            grid-area: right;
+        }
+
+        .footer {
+            grid-area: footer;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="header"></div>
+    <div class="left"></div>
+    <div class="center"></div>
+    <div class="right"></div>
+    <div class="footer"></div>
+</div>
+</body>
+</html>
