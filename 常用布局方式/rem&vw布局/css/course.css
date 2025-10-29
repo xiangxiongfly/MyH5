@@ -1,34 +1,34 @@
 .course_wrap {
-    font-size: 14px;
+    font-size: 3.73vw;
 }
 
 .course_wrap .course_title {
-    padding: 0 0 10px 20px;
+    padding: 0 0 2.67vw 5.33vw;
     color: #191919;
-    font-size: 16px;
+    font-size: 4.27vw;
 }
 
 .course_wrap .course_list {
     display: flex;
     flex-wrap: wrap;
-    padding-right: 20px;
+    padding-right: 5.33vw;
 }
 
 .course_wrap .course_list .course_item {
     width: 50%;
-    margin-bottom: 10px;
-    padding-left: 20px;
+    margin-bottom: 2.67vw;
+    padding-left: 5.33vw;
 }
 
 .course_wrap .course_list .course_item .course_img {
     width: 100%;
-    margin-bottom: 6px;
+    margin-bottom: 1.6vw;
 }
 
 .course_wrap .course_list .course_item .course_name {
-    height: 40px;
-    line-height: 20px;
-    margin-bottom: 4px;
+    height: 10.67vw;
+    line-height: 5.33vw;
+    margin-bottom: 1.07vw;
     color: #333;
     /* 多行文字省略 */
     overflow: hidden;
