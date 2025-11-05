@@ -1,0 +1,111 @@
+.header .topbar {
+    min-width: 1152px;
+    height: 32px;
+    background-color: #2a2a2a;
+    color: white;
+    line-height: 32px;
+}
+
+.header .topbar a {
+    color: white
+}
+
+.header .topbar .shortcut-links {
+    float: left;
+}
+
+.header .topbar .shortcut-links>ul>li {
+    float: left;
+    margin-right: 18px;
+    font-size: 14px;
+}
+
+.header .topbar .shortcut-links>ul>li.have-menu {
+    padding-right: 12px;
+    position: relative;
+}
+
+.header .topbar .shortcut-links>ul>li.have-menu .arrow {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    width: 12px;
+    height: 12px;
+    margin-top: -6px;
+    transition: transform 0.1s ease;
+}
+
+.header .topbar .shortcut-links>ul>li.have-menu .arrow b {
+    position: absolute;
+    left: 4px;
+    top: 2px;
+    width: 6px;
+    height: 6px;
+    background-color: #fff;
+    transform: rotate(45deg);
+}
+
+.header .topbar .shortcut-links>ul>li.have-menu .arrow i {
+    position: absolute;
+    left: 4px;
+    top: 0.5px;
+    width: 6px;
+    height: 6px;
+    background-color: #2A2A2A;
+    transform: rotate(45deg);
+}
+
+.header .topbar .shortcut-links>ul>li.have-menu:hover .arrow {
+    transform: rotate(180deg);
+}
+
+.header .topbar .shortcut-links>ul>li.have-menu .menu {
+    position: absolute;
+    top: 30px;
+    left: 0;
+    padding: 10px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    display: none;
+    z-index: 100;
+}
+
+.header .topbar .shortcut-links>ul>li.have-menu:hover .menu {
+    display: block;
+}
+
+.header .topbar .shortcut-links>ul>li.have-menu .sq-menu {
+    width: 110px;
+}
+
+.header .topbar .shortcut-links>ul>li.have-menu .sc-menu {
+    width: 80px;
+}
+
+.header .topbar .shortcut-links>ul>li.have-menu .jdms-menu {
+    width: 80px;
+}
+
+.header .topbar .shortcut-links>ul>li.have-menu .menu .menu-list li {
+    height: 20px;
+    line-height: 20px;
+}
+
+.header .topbar .shortcut-links>ul>li.have-menu .menu .menu-list a {
+    font-size: 12px;
+    color: #1C1F21;
+    line-height: 20px;
+}
+
+.header .topbar .shortcut-links>ul>li.have-menu .menu .menu-list a:hover {
+    color: orange;
+}
+
+.header .topbar .welcome {
+    float: right;
+}
+
+.header .topbar .welcome a,
+.header .topbar .welcome span {
+    margin-left: 11px;
+}

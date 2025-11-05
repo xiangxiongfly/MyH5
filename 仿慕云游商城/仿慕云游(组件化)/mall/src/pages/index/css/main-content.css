@@ -1,0 +1,512 @@
+/* title start */
+.content-part .hd .title {
+    font-size: 36px;
+    font-weight: bold;
+    color: #1C1F21;
+}
+
+/* title end */
+
+/* sub-title start */
+.content-part .hd .sub-title {
+    color: #1C1F21;
+    position: relative;
+    top: 20px;
+    left: 10px;
+}
+
+/* sub-title end */
+
+/* nav start */
+.content-part .nav ul {
+    padding-top: 16px;
+}
+
+.content-part .nav ul li {
+    float: left;
+    margin-left: 16px;
+    font-size: 14px;
+}
+
+.content-part .nav ul li a {
+    color: rgba(0, 0, 0, 0.85);
+}
+
+.content-part .nav ul li.active {
+    border-bottom: 4px solid #20BD9A;
+    padding-bottom: 4px;
+}
+
+.content-part .nav ul li.active a {
+    color: #20BD9A;
+}
+
+/* nav end */
+
+/* bd start */
+.content-part .bd {
+    padding-top: 32px;
+}
+
+/* bd end */
+
+/* normal-grid start */
+.content-part .bd .normal-grid {
+    position: relative;
+    width: 264px;
+    height: 270px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.08);
+}
+
+.content-part .bd .normal-grid .pic-box {
+    position: relative;
+    height: 184px;
+}
+
+.content-part .bd .normal-grid .pic-box .tag {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 74px;
+    height: 40px;
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.55);
+    text-align: center;
+    line-height: 40px;
+    z-index: 100;
+}
+
+.content-part .bd .normal-grid .word-box {
+    padding: 14px;
+    font-size: 14px;
+    color: #1C1F21;
+    line-height: 26px;
+}
+
+/* normal-grid end */
+
+/* big-grid start */
+.content-part .bd .big-grid {
+    position: relative;
+    width: 560px;
+    height: 270px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.08);
+    overflow: hidden;
+}
+
+.content-part .bd .big-grid .tag {
+    position: absolute;
+    width: 74px;
+    height: 40px;
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.55);
+    bottom: 103px;
+    left: 0;
+    text-align: center;
+    line-height: 40px;
+}
+
+.content-part .bd .big-grid .info {
+    position: absolute;
+    width: 560px;
+    height: 103px;
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.55);
+    bottom: 0;
+    left: 0;
+    padding: 30px 26px;
+    box-sizing: border-box;
+    line-height: 26px;
+}
+
+/* big-grid end */
+
+/* more-grid start */
+.content-part .bd .more-grid {
+    position: relative;
+    width: 264px;
+    height: 270px;
+    background-image: linear-gradient(180deg, #34E3BC 0%, #15AF7A 98%);
+    box-sizing: border-box;
+}
+
+.content-part .bd .more-grid a {
+    display: block;
+    height: 270px;
+    padding-top: 46px;
+    box-sizing: border-box;
+}
+
+.content-part .bd .more-grid p {
+    text-align: center;
+    color: #fff;
+    line-height: 24px;
+    font-size: 15px;
+}
+
+.content-part .bd .more-grid .iconfont {
+    position: absolute;
+    left: 50%;
+    top: 118px;
+    font-size: 48px;
+    width: 48px;
+    height: 48px;
+    color: #fff;
+    margin-left: -24px;
+}
+
+.content-part .bd .more-grid ul {
+    margin-top: 112px;
+    padding-left: 40px;
+}
+
+.content-part .bd .more-grid ul li {
+    float: left;
+    border-right: 1px solid #fff;
+    padding: 0 9px;
+    height: 14px;
+    line-height: 14px;
+    font-size: 14px;
+    color: #fff;
+}
+
+.content-part .bd .more-grid ul li:last-child {
+    border-right: none;
+}
+
+.content-part .bd .more-grid:hover .iconfont {
+    animation: move 0.4s ease 0s infinite alternate;
+}
+
+@keyframes move {
+    from {
+        transform: translateY(-10px);
+    }
+
+    to {
+        transform: translateY(10px);
+    }
+}
+
+/* more-grid end */
+
+/* .pic-box start */
+.content-part .pic-box {
+    overflow: hidden;
+}
+
+.content-part .pic-box img {
+    transition: transform .4s ease 0s;
+}
+
+.content-part .pic-box img:hover {
+    transform: scale(1.1);
+}
+
+/* .pic-box end */
+
+/* havehover start */
+.big-grid.havehover .mask {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    opacity: 0;
+    transition: opacity 0.4s ease 0s;
+}
+
+.big-grid.havehover:hover .mask {
+    opacity: 1;
+}
+
+.big-grid.havehover .circle {
+    position: absolute;
+    top: -106px;
+    left: 50%;
+    width: 106px;
+    height: 106px;
+    margin-left: -53px;
+    border: 1px solid #fff;
+    border-radius: 50%;
+    color: #fff;
+    box-sizing: border-box;
+    padding-top: 25px;
+    font-size: 18px;
+    line-height: 1.5;
+    transition: top 0.5s ease 0s;
+}
+
+.big-grid.havehover .circle p {
+    text-align: center;
+}
+
+.big-grid.havehover:hover .circle {
+    top: 62px;
+}
+
+.big-grid.havehover .word {
+    position: absolute;
+    bottom: -100px;
+    left: 10px;
+    color: #fff;
+    transition: bottom 0.5s ease 0s;
+}
+
+.big-grid.havehover:hover .word {
+    bottom: 30px;
+}
+
+/* havehover end */
+
+.content-part .bd .normal-grid:hover,
+.content-part .bd .big-grid:hover,
+.content-part .bd .more-grid:hover {
+    box-shadow: 0 8px 26px 0 rgba(0, 0, 0, 0.5);
+}
+
+
+/* ====================================================================== */
+
+/* 新鲜甩尾 start */
+.xxsw {
+    padding-top: 40px;
+    height: 698px;
+    background-color: #F7F7F7;
+}
+
+.xxsw ul li {
+    float: left;
+    width: 264px;
+    height: 270px;
+    margin-right: 32px;
+    background-color: #fff;
+    margin-bottom: 32px;
+}
+
+.xxsw ul li:nth-child(4n) {
+    margin-right: 0;
+}
+
+.xxsw ul li:hover {
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.20);
+}
+
+.xxsw ul li .word-box {
+    padding: 15px;
+    color: #1C1F21;
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+/* 新鲜甩尾 end */
+
+/* 机酒自由行 start */
+.jjzyx {
+    padding-top: 40px;
+    height: 698px;
+    background-color: #fff;
+}
+
+.jjzyx .bd>ul>li {
+    float: left;
+    margin-right: 32px;
+    margin-bottom: 32px;
+}
+
+.jjzyx .bd>ul>li:nth-child(3),
+.jjzyx .bd>ul>li:nth-child(7) {
+    margin-right: 0;
+}
+
+/* 机酒自由行 end */
+
+/* 当地玩乐 start */
+.ddwl {
+    padding-top: 40px;
+    height: 546px;
+    background-color: #F7F7F7;
+}
+
+.ddwl .bd .col {
+    float: left;
+    width: 364px;
+    height: 480px;
+    margin-right: 30px;
+}
+
+.ddwl .bd .col:last-child {
+    margin-right: 0;
+}
+
+.ddwl .bd .big-pic-box {
+    position: relative;
+    width: 364px;
+    height: 270px;
+    margin-bottom: 30px;
+}
+
+.ddwl .bd .big-pic-box .info {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 364px;
+    height: 104px;
+    padding: 21px 17px 0;
+    background-color: rgba(0, 0, 0, .53);
+    box-sizing: border-box;
+    color: #fff;
+    font-size: 14px;
+}
+
+.ddwl .bd .big-pic-box .info .proname {
+    line-height: 1.5;
+}
+
+.ddwl .bd .big-pic-box .info .bottom {
+    padding-top: 6px;
+}
+
+.ddwl .bd .big-pic-box .info .bottom .price strong {
+    color: #36DFBA;
+}
+
+.ddwl .bd .small-grid {
+    width: 364px;
+    height: 120px;
+    background-color: #fff;
+    margin-bottom: 30px;
+}
+
+.ddwl .bd .small-grid .pic-box {
+    float: left;
+    width: 120px;
+    height: 120px;
+}
+
+.ddwl .bd .small-grid .word-box {
+    float: left;
+    width: 244px;
+    height: 120px;
+    line-height: 1.5;
+    padding: 26px 18px 0;
+    box-sizing: border-box;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.08);
+    font-size: 14px;
+    color: #000
+}
+
+.ddwl .bd .big-pic-box:hover,
+.ddwl .bd .small-grid:hover {
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+
+.ddwl .bd .more-grid {
+    width: 364px;
+    background-image: linear-gradient(180deg, #FF6374 1%, #FF7368 98%);
+}
+
+.ddwl .bd .more-grid ul {
+    padding-left: 19px;
+}
+
+/* 当地玩乐 end */
+
+/* 特色当地体验 stat */
+.tsddty {
+    height: 456px;
+}
+
+.tsddty .hd {
+    padding-top: 40px;
+}
+
+.tsddty .bd ul li {
+    float: left;
+    width: 264px;
+    height: 290px;
+    margin-right: 32px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.08);
+}
+
+.tsddty .bd ul li:last-child {
+    margin-right: 0;
+}
+
+.tsddty .bd ul li .word-box {
+    padding: 16px 9px 0;
+}
+
+.tsddty .bd ul li .word-box .proname {
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 1.2;
+    color: #000;
+    height: 48px;
+}
+
+.tsddty .bd ul li .word-box .score {
+    font-size: 13px;
+    color: #fa6400;
+}
+
+.tsddty .bd ul li .word-box .comment {
+    font-size: 13px;
+    color: #000;
+}
+
+.tsddty .bd ul li:hover {
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.20);
+}
+
+/* 特色当地体验 end */
+
+/* 最世界·深度旅行 start */
+.zsjsdlx {
+    height: 738px;
+    background-color: #f7f7f7;
+}
+
+.zsjsdlx .hd {
+    padding-top: 40px;
+}
+
+.zsjsdlx .bd>ul>li {
+    float: left;
+    margin-right: 32px;
+    margin-bottom: 32px;
+}
+
+.zsjsdlx .bd>ul>li:nth-child(3),
+.zsjsdlx .bd>ul>li:nth-child(7) {
+    margin-right: 0;
+}
+
+/* 最世界·深度旅行 end */
+
+/* 跟团/半自助游 start */
+.gtbzzy {
+    height: 698px;
+}
+
+.gtbzzy .hd {
+    padding-top: 40px;
+}
+
+.gtbzzy .bd .more-grid ul {
+    padding-left: 67px;
+}
+
+.gtbzzy .bd>ul>li {
+    float: left;
+    margin-right: 32px;
+    margin-bottom: 32px;
+}
+
+.gtbzzy .bd>ul>li:nth-child(3),
+.gtbzzy .bd>ul>li:nth-child(7) {
+    margin-right: 0;
+}
+
+/* 跟团/半自助游 end */

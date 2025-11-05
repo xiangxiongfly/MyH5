@@ -1,0 +1,51 @@
+.banner {
+    position: relative;
+    min-width: 1152px;
+    overflow: hidden;
+}
+
+.banner .banner-content .banner-list {
+    width: 600%;
+    overflow: hidden;
+    transition: transform 0.5s ease 0s;
+}
+
+.banner .banner-content .banner-list li {
+    float: left;
+    width: 16.666%;
+}
+
+.banner .banner-content .banner-list li img {
+    width: 100%;
+    vertical-align: middle;
+}
+
+.banner .banner-content .circle-ol {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    width: 160px;
+    height: 20px;
+    margin-left: -75px;
+    z-index: 9999;
+}
+
+.banner .banner-content .circle-ol li {
+    float: left;
+    width: 20px;
+    height: 20px;
+    background-color: rgb(89, 235, 145);
+    margin-right: 10px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: width 0.5s ease 0s;
+}
+
+.banner .banner-content .circle-ol li:last-child {
+    margin-right: 0;
+}
+
+.banner .banner-content .circle-ol li.active {
+    width: 40px;
+    background-color: #20BD9A;
+}

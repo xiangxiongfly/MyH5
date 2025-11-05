@@ -1,0 +1,21 @@
+/* 左边按钮 */
+.banner .left-btn {
+    position: absolute;
+    width: 28px;
+    height: 44px;
+    background: url(../../images/icons.png) no-repeat -21px -94px;
+    top: 50%;
+    left: -38px;
+    margin-top: -22px;
+}
+
+/* 左右按钮 */
+.banner .right-btn {
+    position: absolute;
+    width: 28px;
+    height: 44px;
+    background: url(../../images/icons.png) no-repeat -21px -29px;
+    top: 50%;
+    right: -38px;
+    margin-top: -22px;
+}

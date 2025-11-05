@@ -1,0 +1,26 @@
+<div class="hot-ads">
+  <div class="w">
+    <ul class="clearfix">
+      <li>
+        <a href="javascript:;">
+          <img src="../../images/small01.png" />
+        </a>
+      </li>
+      <li>
+        <a href="javascript:;">
+          <img src="../../images/small02.png" />
+        </a>
+      </li>
+      <li>
+        <a href="javascript:;">
+          <img src="../../images/small03.png" />
+        </a>
+      </li>
+      <li>
+        <a href="javascript:;">
+          <img src="../../images/small04.png" />
+        </a>
+      </li>
+    </ul>
+  </div>
+</div>

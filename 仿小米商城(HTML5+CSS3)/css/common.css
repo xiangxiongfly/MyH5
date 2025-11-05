@@ -1,0 +1,24 @@
+.clearfix {
+  *zoom: 1;
+}
+
+.clearfix::after {
+  clear: both;
+  content: "";
+  display: block;
+  height: 0;
+  visibility: hidden;
+}
+
+.w {
+  width: 1226px;
+  margin: 0 auto;
+}
+
+.fl {
+  float: left;
+}
+
+.fr {
+  float: right;
+}

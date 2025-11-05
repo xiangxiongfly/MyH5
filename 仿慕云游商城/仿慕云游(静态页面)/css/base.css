@@ -1,0 +1,73 @@
+/* 苹方字体 */
+@font-face {
+    font-family: "PingFangSCRegular";
+    src: url('../fonts/PingFangSCRegular.ttf') format('truetype');
+}
+
+/* 字体图标 */
+@font-face {
+    font-family: 'iconfont';
+    src: url('../fonts/iconfont.eot');
+    src: url('../fonts/iconfont.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/iconfont.woff2') format('woff2'),
+        url('../fonts/iconfont.woff') format('woff'),
+        url('../fonts/iconfont.ttf') format('truetype'),
+        url('../fonts/iconfont.svg#iconfont') format('svg');
+}
+
+.iconfont {
+    font-family: "iconfont" !important;
+    font-size: 16px;
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* 使用苹方字体 */
+body {
+    font-family: "PingFangSCRegular";
+}
+
+/* 版心 */
+.w {
+    width: 1152px;
+    margin: 0 auto;
+}
+
+/* 清除浮动 */
+.clearfix {
+    *zoom: 1;
+}
+
+.clearfix::after {
+    clear: both;
+    content: "";
+    display: block;
+    height: 0;
+    visibility: hidden;
+}
+
+/* 转块元素 */
+.db {
+    display: block;
+}
+
+/* 转行内块元素 */
+.dib {
+    display: inline-block;
+}
+
+/* 文字居中 */
+.text-center {
+    text-align: center;
+}
+
+/* 左浮动 */
+.fl {
+    float: left;
+}
+
+/* 右浮动 */
+.fr {
+    float: right;
+}
