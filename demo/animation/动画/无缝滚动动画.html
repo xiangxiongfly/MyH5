@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>无缝滚动动画</title>
+		<style type="text/css">
+			@keyframes moving {
+				from {
+					transform: translateX(0);
+				}
+
+				to {
+					transform: translateX(-882px);
+				}
+			}
+
+			* {
+				margin: 0;
+				padding: 0;
+			}
+
+			.nav {
+				width: 882px;
+				height: 86px;
+				border: 1px solid black;
+				margin: 100px auto;
+				overflow: hidden;
+			}
+
+			.nav ul {
+				list-style: none;
+				width: 200%;
+				animation: moving 5s linear infinite;
+			}
+
+			.nav li {
+				float: left;
+			}
+
+			.nav:hover ul {
+				animation-play-state: paused;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="nav">
+			<ul>
+				<li><img src="../../../assets/images/apple_pic.png"></li>
+				<li><img src="../../../assets/images/banana_pic.png"></li>
+				<li><img src="../../../assets/images/cherry_pic.png"></li>
+				<li><img src="../../../assets/images/grape_pic.png"></li>
+				<li><img src="../../../assets/images/mango_pic.png"></li>
+				<li><img src="../../../assets/images/orange_pic.png"></li>
+				<li><img src="../../../assets/images/pear_pic.png"></li>
+				<li><img src="../../../assets/images/pineapple_pic.png"></li>
+				<li><img src="../../../assets/images/strawberry_pic.png"></li>
+				<li><img src="../../../assets/images/orange_pic.png"></li>
+				<li><img src="../../../assets/images/watermelon_pic.png"></li>
+				<li><img src="../../../assets/images/apple_pic.png"></li>
+				<li><img src="../../../assets/images/banana_pic.png"></li>
+				<li><img src="../../../assets/images/cherry_pic.png"></li>
+				<li><img src="../../../assets/images/grape_pic.png"></li>
+				<li><img src="../../../assets/images/mango_pic.png"></li>
+				<li><img src="../../../assets/images/orange_pic.png"></li>
+				<li><img src="../../../assets/images/pear_pic.png"></li>
+				<li><img src="../../../assets/images/pineapple_pic.png"></li>
+				<li><img src="../../../assets/images/strawberry_pic.png"></li>
+				<li><img src="../../../assets/images/orange_pic.png"></li>
+				<li><img src="../../../assets/images/watermelon_pic.png"></li>
+			</ul>
+		</div>
+	</body>
+</html>

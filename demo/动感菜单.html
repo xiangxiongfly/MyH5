@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>动感菜单</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            min-height: 100vh;
+            background: linear-gradient(to bottom, red, blue);
+        }
+
+        .nav {
+            width: 250px;
+            height: 50px;
+            background-color: #fff;
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            z-index: 1000;
+            line-height: 50px;
+        }
+
+        .toggle {
+            width: 100%;
+            cursor: pointer;
+            color: #ff0000;
+            padding-left: 20px;
+        }
+
+        ul {
+            display: flex;
+            flex-direction: column;
+            list-style: none;
+            position: relative;
+        }
+
+        ul li {
+            height: 50px;
+            padding-left: 20px;
+            color: #333;
+            background-color: #fff;
+            cursor: pointer;
+            position: relative;
+            opacity: 0;
+            transform: translateX(-250px);
+            transition: all 0.5s calc(0.1s * var(--position));
+        }
+
+        ul li:hover {
+            background-color: #ebe7e7;
+        }
+
+        .nav:hover ul li {
+            transform: translateX(0);
+            opacity: 1;
+        }
+
+    </style>
+</head>
+<body>
+<div class="nav">
+    <div class="toggle">
+        菜单
+    </div>
+    <ul>
+        <li style="--position:0;">主页</li>
+        <li style="--position:1;">关于我们</li>
+        <li style="--position:2;">售后服务</li>
+        <li style="--position:3;">产品介绍</li>
+        <li style="--position:4;">联系我们</li>
+    </ul>
+</div>
+</body>
+</html>

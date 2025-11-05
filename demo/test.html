@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .nav {
+            position: fixed;
+            width: 100%;
+            height: 200px;
+            background-color: pink;
+        }
+
+        .content {
+            padding-top: 200px;
+            width: 100%;
+            height: 2000px;
+            background-color: #7a6e6e;
+        }
+    </style>
+</head>
+<body>
+<div class="nav">1111111111</div>
+<div class="content">222222222222</div>
+<script>
+    window.addEventListener("scroll", function () {
+        console.log("scrollTop", scrollY);
+    });
+</script>
+</body>
+</html>

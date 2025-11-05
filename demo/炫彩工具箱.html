@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>炫彩工具箱</title>
+    <link rel="stylesheet" href="https://at.alicdn.com/t/c/font_4090357_z2qpnic06um.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #303640;
+        }
+
+        .menu {
+            position: relative;
+            width: 200px;
+            height: 200px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .btn {
+            position: absolute;
+            z-index: 1000;
+            width: 60px;
+            height: 60px;
+            color: #fff;
+            background-color: #303640;
+            border: 2px solid #fff;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            transition: all 1.25s;
+        }
+
+        .btn i {
+            font-size: 32px;
+        }
+
+        .menu span {
+            position: absolute;
+            width: 40px;
+            height: 40px;
+            color: var(--color);
+            background-color: #303640;
+            border: 2px solid var(--color);
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            transition: all 0.2s calc(0.05s * var(--position));
+        }
+
+        .menu:hover .btn {
+            transform: rotate(315deg);
+        }
+
+        .menu:hover span {
+            transform: rotate(calc(360deg / 8 * var(--position))) translateX(80px);
+        }
+
+        .menu:hover span i {
+            transform: rotate(calc(-360deg / 8 * var(--position)));
+        }
+
+        .menu span:hover {
+            color: #333;
+            box-shadow: 0 0 10px var(--color),
+            0 0 30px var(--color),
+            0 0 50px var(--color);
+            background-color: var(--color);
+            transition: none;
+        }
+    </style>
+</head>
+<body>
+<div class="menu">
+    <div class="btn"><i class="iconfont icon-add"></i></div>
+    <span style="--position:0;--color:#ff2972;">
+        <i class="iconfont icon-home"></i>
+    </span>
+    <span style="--position:1;--color:#fee800;">
+        <i class="iconfont icon-more"></i>
+    </span>
+    <span style="--position:2;--color:#04fc43;">
+        <i class="iconfont icon-gift"></i>
+    </span>
+    <span style="--position:3;--color:#fe00f1;">
+        <i class="iconfont icon-setting"></i>
+    </span>
+    <span style="--position:4;--color:#00b0fe;">
+        <i class="iconfont icon-message"></i>
+    </span>
+    <span style="--position:5;--color:#fea600;">
+        <i class="iconfont icon-cart"></i>
+    </span>
+    <span style="--position:6;--color:#a529ff;">
+        <i class="iconfont icon-money"></i>
+    </span>
+    <span style="--position:7;--color:#01bdab;">
+        <i class="iconfont icon-star"></i>
+    </span>
+</div>
+</body>
+</html>

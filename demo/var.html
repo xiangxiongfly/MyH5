@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>var()</title>
+    <style>
+        .box {
+            /*局部变量*/
+            --color: red;
+            --width: 100px;
+            --height: 50px;
+            --hoverColor: pink;
+            width: var(--width);
+            height: var(--height);
+            background-color: var(--color);
+        }
+
+        .box:hover {
+            background-color: var(--hoverColor);
+        }
+    </style>
+</head>
+<body>
+<div class="box">
+
+</div>
+</body>
+</html>

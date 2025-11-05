@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>响应式布局</title>
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/index.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
+  </head>
+  <body>
+    <div class="header">
+      <div class="header_wrap">
+        <div href="javascript:;">hello</div>
+        <button class="toggle" id="toggle">
+          <span class="toggle_line"></span>
+          <span class="toggle_line"></span>
+          <span class="toggle_line"></span>
+        </button>
+        <nav class="nav" id="nav">
+          <ul class="nav_list">
+            <li><a href="javascript:;" class="nav_link">首页</a></li>
+            <li><a href="javascript:;" class="nav_link">热门新闻</a></li>
+            <li><a href="javascript:;" class="nav_link">职业规划</a></li>
+            <li><a href="javascript:;" class="nav_link">专栏/手记/关注</a></li>
+            <li><a href="javascript:;" class="nav_link">教程</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+    <div class="main">
+      <ul class="box_list">
+        <li class="box_item"><img src="images/2.jpg" /></li>
+        <li class="box_item"><img src="images/2.jpg" /></li>
+        <li class="box_item"><img src="images/2.jpg" /></li>
+        <li class="box_item"><img src="images/2.jpg" /></li>
+        <li class="box_item"><img src="images/2.jpg" /></li>
+        <li class="box_item"><img src="images/2.jpg" /></li>
+        <li class="box_item"><img src="images/2.jpg" /></li>
+      </ul>
+    </div>
+    <script>
+      let toggle = document.getElementById("toggle");
+      let nav = document.getElementById("nav");
+      toggle.onclick = function () {
+        this.classList.toggle("toggle_active");
+        nav.classList.toggle("nav_extended");
+      };
+    </script>
+  </body>
+</html>

@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>凹导航栏</title>
+    <link rel="stylesheet" href="http://at.alicdn.com/t/c/font_4144272_3vtq4renm6e.css"/>
+    <style>
+        :root {
+            --itemWidth: 70px;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Poppins", sans-serif;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #222327;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        .nav {
+            position: relative;
+            width: 400px;
+            height: 70px;
+            padding: 0 25px;
+            border-radius: 10px;
+            background-color: #fff;
+            display: flex;
+        }
+
+        .nav li {
+            position: relative;
+            width: var(--itemWidth);
+            height: 100%;
+            z-index: 1;
+            cursor: pointer;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .nav li i {
+            position: relative;
+            height: 70px;
+            line-height: 70px;
+            display: block;
+            font-size: 24px;
+            text-align: center;
+            transition: all 0.5s;
+        }
+
+        .nav li span {
+            position: absolute;
+            font-size: 12px;
+            letter-spacing: 2px;
+            transition: all 0.5s;
+            opacity: 0;
+            transform: translateY(20px);
+        }
+
+        .nav li:hover i {
+            transform: translateY(-35px);
+            color: #fff;
+        }
+
+        .nav li:hover span {
+            opacity: 1;
+            transform: translateY(10px);
+        }
+
+        .nav li.active i {
+            transform: translateY(-35px);
+            color: #fff;
+        }
+
+        .nav li.active span {
+            opacity: 1;
+            transform: translateY(10px);
+        }
+
+        .indicator {
+            position: absolute;
+            top: -50%;
+            width: 70px;
+            height: 70px;
+            background-color: #2196f3;
+            border: 6px solid #222327;
+            border-radius: 50%;
+            transition: all 0.5s;
+        }
+
+        .indicator::before {
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: -22px;
+            width: 20px;
+            height: 20px;
+            background-color: #fff;
+            border-top-right-radius: 20px;
+            box-shadow: 1px -10px 0 0 #222327;
+        }
+
+        .indicator::after {
+            content: "";
+            position: absolute;
+            top: 50%;
+            right: -22px;
+            width: 20px;
+            height: 20px;
+            background-color: #fff;
+            border-top-left-radius: 20px;
+            box-shadow: -1px -10px 0 0 #222327;
+        }
+
+        li:nth-child(1):hover ~ .indicator,
+        li:nth-child(1).active ~ .indicator {
+            transform: translateX(calc(var(--itemWidth) * 0));
+        }
+
+        li:nth-child(2):hover ~ .indicator,
+        li:nth-child(2).active ~ .indicator {
+            transform: translateX(calc(var(--itemWidth) * 1));
+        }
+
+        li:nth-child(3):hover ~ .indicator,
+        li:nth-child(3).active ~ .indicator {
+            transform: translateX(calc(var(--itemWidth) * 2));
+        }
+
+        li:nth-child(4):hover ~ .indicator,
+        li:nth-child(4).active ~ .indicator {
+            transform: translateX(calc(var(--itemWidth) * 3));
+        }
+
+        li:nth-child(5):hover ~ .indicator,
+        li:nth-child(5).active ~ .indicator {
+            transform: translateX(calc(var(--itemWidth) * 4));
+        }
+    </style>
+</head>
+<body>
+<ul class="nav">
+    <li class="active">
+        <i class="iconfont icon-home"></i>
+        <span>Home</span>
+    </li>
+    <li>
+        <i class="iconfont icon-envelope"></i>
+        <span>Email</span>
+    </li>
+    <li>
+        <i class="iconfont icon-comment"></i>
+        <span>Message</span>
+    </li>
+    <li>
+        <i class="iconfont icon-heart"></i>
+        <span>Like</span>
+    </li>
+    <li>
+        <i class="iconfont icon-user"></i>
+        <span>Profile</span>
+    </li>
+    <div class="indicator"></div>
+</ul>
+<script>
+    const navItems = document.querySelectorAll(".nav li");
+    navItems.forEach((item, index) => {
+        item.addEventListener("click", (e) => {
+            setActiveItem(index);
+        });
+    });
+
+    function setActiveItem(index) {
+        navItems.forEach(item => {
+            item.classList.remove("active");
+        });
+        navItems[index].classList.add("active");
+    }
+</script>
+</body>
+</html>

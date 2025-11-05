@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>滑动导航栏</title>
+    <style>
+        :root {
+            --itemWidth: 150px;
+        }
+
+        body {
+            background-color: #2c3e50;
+        }
+
+        nav {
+            margin: 100px auto;
+            position: relative;
+            width: calc(var(--itemWidth) * 5);
+            height: 50px;
+            background-color: #34495e;
+            border-radius: 8px;
+            font-size: 0;
+            box-shadow: 2px 2px 2px #000;
+        }
+
+        nav a {
+            position: relative;
+            width: var(--itemWidth);
+            height: 100%;
+            line-height: 50px;
+            font-size: 15px;
+            display: inline-block;
+            text-decoration: none;
+            text-transform: uppercase;
+            text-align: center;
+            color: #fff;
+            cursor: pointer;
+            z-index: 1;
+        }
+
+        nav .slider {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: var(--itemWidth);
+            height: 100%;
+            z-index: 0;
+            background-color: green;
+            border-radius: 8px;
+            transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        nav a:nth-child(1):hover ~ .slider {
+            left: calc(var(--itemWidth) * 0);
+        }
+
+        nav a:nth-child(2):hover ~ .slider {
+            left: calc(var(--itemWidth) * 1);
+            background-color: red;
+        }
+
+        nav a:nth-child(3):hover ~ .slider {
+            left: calc(var(--itemWidth) * 2);
+            background-color: blue;
+        }
+
+        nav a:nth-child(4):hover ~ .slider {
+            left: calc(var(--itemWidth) * 3);
+            background-color: darkgray;
+        }
+
+        nav a:nth-child(5):hover ~ .slider {
+            left: calc(var(--itemWidth) * 4);
+            background-color: orange;
+        }
+    </style>
+</head>
+<body>
+<nav>
+    <a href="#">Home</a>
+    <a href="#">About</a>
+    <a href="#">Blog</a>
+    <a href="#">News</a>
+    <a href="#">Contact</a>
+    <div class="slider"></div>
+</nav>
+</body>
+</html>
