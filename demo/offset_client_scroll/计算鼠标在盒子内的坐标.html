@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>计算鼠标在盒子内的坐标</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .box {
+            width: 300px;
+            height: 300px;
+            margin: 100px auto;
+            background-color: lightgray;
+        }
+
+        p {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+<div class="box"></div>
+<p></p>
+<script>
+    const box = document.querySelector(".box");
+    const p = document.querySelector("p");
+    box.addEventListener("mousemove", (e) => {
+        const x = e.pageX - box.offsetLeft;
+        const y = e.pageY - box.offsetTop;
+        p.innerText = `${x}px ${y}px`;
+    });
+</script>
+</body>
+</html>

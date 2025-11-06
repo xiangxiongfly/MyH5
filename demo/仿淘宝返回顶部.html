@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>仿淘宝返回顶部</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .w {
+            width: 1200px;
+            margin: 10px auto;
+        }
+
+        .header {
+            height: 150px;
+            background-color: lightgray;
+        }
+
+        .banner {
+            height: 250px;
+            background-color: lightblue;
+        }
+
+        .main {
+            height: 1000px;
+            background-color: darkgreen;
+        }
+
+        .slider-bar {
+            position: absolute;
+            left: 50%;
+            top: 300px;
+            width: 45px;
+            height: 130px;
+            margin-left: 600px;
+            background-color: lightpink;
+        }
+
+        .slider-bar span {
+            position: absolute;
+            bottom: 0;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+<div class="slider-bar">
+    <span class="goBack">返回顶部</span>
+</div>
+<div class="header">头部区域</div>
+<div class="banner w">轮播图区域</div>
+<div class="main w">主体区域</div>
+<script>
+    const sliderBar = document.querySelector(".slider-bar");
+    const banner = document.querySelector(".banner");
+    const main = document.querySelector(".main");
+    const goBack = document.querySelector(".goBack");
+
+    const bannerTop = banner.offsetTop;
+    const mainTop = main.offsetTop;
+    const sliderBarTop = sliderBar.offsetTop - bannerTop;
+
+    window.addEventListener("scroll", () => {
+        if (window.scrollY >= bannerTop) {
+            sliderBar.style.position = "fixed";
+            sliderBar.style.top = sliderBarTop + "px";
+        } else {
+            sliderBar.style.position = "absolute";
+            sliderBar.style.top = "300px";
+        }
+        if (window.scrollY >= mainTop) {
+            goBack.style.display = "block";
+        } else {
+            goBack.style.display = "none";
+        }
+    });
+    goBack.addEventListener("click", () => {
+        // window.scroll(0, 0);
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth"
+        });
+    });
+</script>
+</body>
+</html>

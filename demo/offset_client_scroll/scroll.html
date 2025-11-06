@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>scroll</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            text-align: center;
+        }
+
+        .box {
+            width: 200px;
+            height: 200px;
+            padding: 10px;
+            border: 1px solid black;
+            background-color: red;
+            overflow: auto;
+            margin: 100px auto;
+        }
+
+        #btn {
+            margin: auto;
+        }
+    </style>
+</head>
+<body>
+<div class="box">
+    我是内容 我是内容 我是内容 我是内容 我是内容 我是内容 我是内容 我是内容 我是内容 我是内容 我是内容 我是内容 我是内容
+    我是内容 我是内容 我是内容 我是内容 我是内容 我是内容 我是内容 我是内容 我是内容 我是内容 我是内容 我是内容 我是内容
+    我是内容 我是内容 我是内容 我是内容 我是内容 我是内容 我是内容 我是内容
+</div>
+<button id="btn">获取</button>
+<script>
+    const box = document.querySelector(".box");
+    const btn = document.querySelector("#btn");
+    console.log(box.scrollTop); // 0
+    console.log(box.scrollLeft); // 0
+    console.log(box.scrollWidth); // 205
+    console.log(box.scrollHeight); // 332
+    btn.addEventListener("click", () => {
+        console.log(box.scrollTop);
+    });
+</script>
+</body>
+</html>
