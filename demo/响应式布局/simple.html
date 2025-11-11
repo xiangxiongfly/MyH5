@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>响应式布局-简单使用</title>
+    <style>
+        /*屏幕尺寸大于等于1200px时，背景为红色*/
+        @media screen and (min-width: 1200px) {
+            body {
+                background-color: red;
+            }
+        }
+
+        /*屏幕尺寸在768px~1200px时，背景为绿色*/
+        @media screen and (min-width: 768px) and (max-width: 1200px) {
+            body {
+                background-color: green;
+            }
+        }
+
+        /*屏幕尺寸小于等于768px时，背景为蓝色*/
+        @media screen and (max-width: 768px) {
+            body {
+                background-color: blue;
+            }
+        }
+    </style>
+</head>
+<body>
+
+</body>
+</html>
