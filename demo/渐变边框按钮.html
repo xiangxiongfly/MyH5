@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>渐变边框按钮</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #1e1f26;
+        }
+
+        a {
+            text-decoration: none;
+            color: #fff;
+        }
+
+        .btn {
+            position: relative;
+            width: 140px;
+            height: 60px;
+            padding: 3px;
+            border-radius: 6px;
+            margin: 100px auto;
+            display: block;
+            text-align: center;
+            line-height: 57px;
+            overflow: hidden;
+        }
+
+        .btn::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 200%;
+            height: 100%;
+            background: linear-gradient(115deg, #4fcf70, #fad648, #a767e5, #12bcfe, #44ce7b);
+            background-size: 50% 100%;
+            animation: move 0.75s linear infinite;
+        }
+
+        @keyframes move {
+            to {
+                transform: translateX(-50%);
+            }
+        }
+
+        .btn span {
+            position: relative;
+            display: block;
+            width: 100%;
+            height: 100%;
+            background-color: #000;
+            border-radius: 3px;
+        }
+
+    </style>
+</head>
+<body>
+<a href="#" class="btn">
+    <span>开始按钮</span>
+</a>
+</body>
+</html>

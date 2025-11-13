@@ -25,7 +25,7 @@
 }
 
 /* 购物车样式 */
-.cart {
+.card {
     position: relative;
     width: 120px;
     height: 40px;
@@ -35,19 +35,19 @@
     text-align: center;
 }
 
-.cart i {
+.card i {
     margin-right: 40x;
 }
 
-.cart:hover {
+.card:hover {
     background-color: #fff;
 }
 
-.cart:hover>a {
+.card:hover>a {
     color: #ff6700;
 }
 
-.cart .cart_list {
+.card .cart_list {
     z-index: 10;
     position: absolute;
     top: 40px;
@@ -62,7 +62,7 @@
     transition: all 0.3s;
 }
 
-.cart:hover .cart_list {
+.card:hover .cart_list {
     height: 100px;
 }
 

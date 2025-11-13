@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>滚动图册</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        .box {
+            position: relative;
+            width: 1000px;
+            margin: 100px auto;
+            overflow: hidden;
+        }
+
+        .box::before,
+        .box::after {
+            position: absolute;
+            left: 0;
+            width: 100%;
+            height: 100px;
+            background-color: #fff;
+            border-radius: 50%;
+            z-index: 1;
+            font-size: 18px;
+            text-align: center;
+            line-height: 150px;
+        }
+
+        .box::before {
+            content: '滚动鼠标滚轮查看';
+            top: -50px;
+        }
+
+        .box::after {
+            content: '';
+            bottom: -50px;
+        }
+
+        .box ul {
+            position: relative;
+            display: flex;
+            gap: 15px;
+            overflow-x: scroll;
+            /*隐藏滚动条*/
+            scrollbar-width: none;
+            scroll-behavior: smooth;
+        }
+
+        .box ul li {
+            flex: 0 0 200px;
+        }
+
+        .box ul li img {
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+<div class="box">
+    <ul>
+        <li><a href="#"><img src="../../assets/images/cat/cat1.jpg" alt=""></a></li>
+        <li><a href="#"><img src="../../assets/images/cat/cat2.jpg" alt=""></a></li>
+        <li><a href="#"><img src="../../assets/images/cat/cat3.jpg" alt=""></a></li>
+        <li><a href="#"><img src="../../assets/images/cat/cat4.jpg" alt=""></a></li>
+        <li><a href="#"><img src="../../assets/images/cat/cat5.jpg" alt=""></a></li>
+        <li><a href="#"><img src="../../assets/images/cat/cat6.jpg" alt=""></a></li>
+        <li><a href="#"><img src="../../assets/images/cat/cat7.jpg" alt=""></a></li>
+        <li><a href="#"><img src="../../assets/images/cat/cat8.jpeg" alt=""></a></li>
+        <li><a href="#"><img src="../../assets/images/cat/cat9.jpeg" alt=""></a></li>
+        <li><a href="#"><img src="../../assets/images/cat/cat10.jpeg" alt=""></a></li>
+        <li><a href="#"><img src="../../assets/images/cat/cat11.jpeg" alt=""></a></li>
+        <li><a href="#"><img src="../../assets/images/cat/cat12.jpeg" alt=""></a></li>
+    </ul>
+</div>
+
+<script>
+
+</script>
+</body>
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>小米卡片</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #ccc
+        }
+
+        .card {
+            width: 234px;
+            height: 300px;
+            background-color: #fff;
+            margin: 100px auto;
+            text-align: center;
+        }
+
+        .card img {
+            width: 160px;
+            height: 160px;
+            margin-top: 20px;
+        }
+
+        .card .title {
+            font-size: 14px;
+            font-weight: 400;
+            color: #333;
+            margin-top: 18px;
+        }
+
+        .card .desc {
+            font-size: 12px;
+            color: #b0b0b0;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            padding: 0 10px;
+        }
+
+        .card .price {
+            font-size: 14px;
+            color: #b0b0b0;
+            margin-top: 10px;
+        }
+
+        .card .price span {
+            color: #ff6700;
+        }
+    </style>
+</head>
+<body>
+<div class="card">
+    <img src="../assets/images/headset.png" alt="">
+    <h3 class="title">小米耳机</h3>
+    <p class="desc">舒适无感佩戴｜高通全链路无损音频｜哈曼 AudioEFX 联合调音</p>
+    <p class="price">
+        <span>659元</span>
+        <del>999元</del>
+    </p>
+</div>
+</body>
+</html>
