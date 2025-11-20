@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>仿360官网动画效果2</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        html, body {
+            width: 100%;
+            height: 100%;
+        }
+
+        body {
+            background: url(../../../assets/images/bg/bg6.png);
+        }
+
+        .box {
+            width: 548px;
+            height: 513px;
+            margin: 200px;
+            background: url(../../../assets/images/step.png) no-repeat left/13700px 513px;
+            animation: anim 1s steps(25) infinite;
+        }
+
+        @keyframes anim {
+            from {
+                background-position-x: 0;
+            }
+            to {
+                background-position-x: -13700px;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="box"></div>
+</body>
+</html>

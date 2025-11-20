@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>卡片折叠效果</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        .box {
+            overflow: hidden;
+            max-width: 1320px;
+            height: 527px;
+            margin: 100px auto;
+        }
+
+        .box ul {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            grid-template-rows: 527px;
+            gap: 8px;
+            transition: all 0.5s;
+        }
+
+        .box .item {
+            position: relative;
+            background: url(../../../assets/images/pic1.png) no-repeat 50%/cover;
+        }
+
+        .box .item:nth-child(2) {
+            background-image: url(../../../assets/images/pic2.png);
+        }
+
+        .box .item:nth-child(3) {
+            background-image: url(../../../assets/images/pic3.png);
+        }
+
+        .box .item:nth-child(4) {
+            background-image: url(../../../assets/images/pic4.png);
+        }
+
+        .box ul:has(.item:nth-child(1):hover) {
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+        }
+
+        .box ul:has(.item:nth-child(2):hover) {
+            grid-template-columns: 1fr 2fr 1fr 1fr;
+        }
+
+        .box ul:has(.item:nth-child(3):hover) {
+            grid-template-columns: 1fr 1fr 2fr 1fr;
+        }
+
+        .box ul:has(.item:nth-child(4):hover) {
+            grid-template-columns: 1fr 1fr 1fr 2fr;
+        }
+
+        .item p {
+            position: absolute;
+            left: 0;
+            bottom: -100px;
+            color: #fff;
+            padding: 20px;
+        }
+
+        .item:hover p {
+            bottom: 0;
+            transition: all 0.5s;
+        }
+    </style>
+</head>
+<body>
+<div class="box">
+    <ul>
+        <li class="item">
+            <p>超长质保</p>
+        </li>
+        <li class="item">
+            <p>超长质保</p>
+        </li>
+        <li class="item">
+            <p>超长质保</p>
+        </li>
+        <li class="item">
+            <p>超长质保</p>
+        </li>
+    </ul>
+</div>
+</body>
+</html>

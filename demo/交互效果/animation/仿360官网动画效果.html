@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>仿360官网动画效果</title>
+    <style>
+        html, body {
+            width: 100%;
+            height: 100%;
+        }
+
+        body {
+            overflow: hidden;
+            background: url(../../../assets/images/bg/bg5.jpg) no-repeat center/cover #000;
+        }
+
+        .star1 {
+            position: absolute;
+            left: 20%;
+            top: 22%;
+            width: 13%;
+            animation: starAnim 5s linear infinite alternate;
+        }
+
+        .star2 {
+            position: absolute;
+            left: 65%;
+            top: 50%;
+            width: 22%;
+            animation: starAnim 6s linear infinite alternate;
+        }
+
+        .satellite {
+            position: absolute;
+            width: 8%;
+            left: 64%;
+            top: 40%;
+            animation: satelliteAnim 30s linear infinite alternate;
+        }
+
+        @keyframes starAnim {
+            from {
+                transform: translateY(0);
+            }
+            to {
+                transform: translateY(-25px);
+            }
+        }
+
+        @keyframes satelliteAnim {
+            from {
+                transform: rotate(0deg);
+            }
+
+            to {
+                transform: rotate(-45deg);
+            }
+        }
+
+    </style>
+</head>
+<body>
+<img src="../../../assets/images/star1.png" alt="" class="star1">
+<img src="../../../assets/images/star2.png" alt="" class="star2">
+<img src="../../../assets/images/satellite.png" alt="" class="satellite">
+</body>
+</html>
