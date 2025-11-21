@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>animation-timeline 视图时间线</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            height: 3000px;
+        }
+
+        .box {
+            position: sticky;
+            top: 50px;
+            width: 1000px;
+            height: 500px;
+            margin: 800px auto 0;
+        }
+
+        .box p {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 30px;
+        }
+
+        .box img {
+            position: absolute;
+            opacity: 0.2;
+            animation: anim 1s linear forwards;
+            animation-timeline: view();
+        }
+
+        .box .pic1 {
+            top: 0;
+            left: 0;
+            width: 200px;
+        }
+
+        .box .pic2 {
+            right: 0;
+            bottom: 0;
+            width: 200px;
+        }
+
+        @keyframes anim {
+            from {
+                transform: scale(1);
+                opacity: 0.2;
+            }
+            to {
+                transform: scale(1.5);
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="box">
+    <p>hello world</p>
+    <img class="pic1" src="../../../assets/images/0.jpg" alt="">
+    <img class="pic2" src="../../../assets/images/pic1.png" alt="">
+</div>
+</body>
+</html>
