@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>background-clip</title>
+    <style>
+        div[class^="box"] {
+            width: 100px;
+            height: 100px;
+            margin-top: 10px;
+            padding: 20px;
+            border: 20px dashed silver;
+            background-image: url("../../assets/images/fruit/apple_pic.png");
+            background-repeat: no-repeat;
+            background-origin: border-box;
+        }
+
+        .box1 {
+            background-clip: border-box;
+        }
+
+        .box2 {
+            background-clip: padding-box;
+        }
+
+        .box3 {
+            background-clip: content-box;
+        }
+
+        .wrap {
+            font-size: 50px;
+            background: linear-gradient(to right, #ff69b3, #fe0000, #ffa401, #ffff01, #008102, #40e1d2, #410898, #9400d4);
+            color: transparent;
+            background-clip: text;
+        }
+    </style>
+</head>
+<body>
+<div class="box1">border-box</div>
+<div class="box2">padding-box</div>
+<div class="box3">content-box</div>
+<div class="wrap">hello world</div>
+</body>
+</html>

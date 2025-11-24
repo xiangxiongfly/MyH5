@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>换肤效果</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        .box {
+            position: relative;
+            margin: 50px auto;
+        }
+
+        .box img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 700px;
+            transition: all 2s;
+        }
+
+        .box img:nth-child(2) {
+            -webkit-clip-path: polygon(0% 0%, 0 0, 0 53%, 0% 100%, 0 100%);
+            clip-path: polygon(0% 0%, 0 0, 0 53%, 0% 100%, 0 100%);
+        }
+
+        .box:hover img:nth-child(2) {
+            -webkit-clip-path: polygon(0% 0%, 75% 0%, 100% 50%, 75% 100%, 0% 100%);
+            clip-path: polygon(0% 0%, 75% 0%, 100% 50%, 75% 100%, 0% 100%);
+        }
+    </style>
+</head>
+<body>
+<div class="box">
+    <img src="../../assets/images/car/blue.png" alt="">
+    <img src="../../assets/images/car/orange.png" alt="">
+</div>
+</body>
+</html>
