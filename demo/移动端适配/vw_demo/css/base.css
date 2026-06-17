@@ -1,33 +1,55 @@
-body {
-    margin: 0;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-}
-
-body * {
+*, *::before, *::after {
     box-sizing: border-box;
 }
 
-h1, h2, h3, h4, h5, h6, ul, ol, p {
+html {
+    line-height: 1.5;
+    -webkit-text-size-adjust: 100%;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6, p, ul, ol, dl {
     margin: 0;
     padding: 0;
 }
 
-a {
-    text-decoration: none;
-    -webkit-tap-highlight-color: transparent; /*去除点击高亮*/
-}
-
-input, button, textarea {
-    color: inherit;
-    font: inherit;
-    border: none;
-}
-
-a:focus, input:focus, button:focus, textarea:focus {
-    outline: none;
-}
-
-ol, ul, dl {
+ul, ol {
     list-style: none;
 }
 
+a {
+    text-decoration: none;
+    -webkit-tap-highlight-color: transparent;
+    color: inherit;
+}
+
+input, button, textarea, select {
+    font: inherit;
+    color: inherit;
+    border: none;
+    background: none;
+}
+
+button {
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+}
+
+a:focus, input:focus, button:focus, textarea:focus, select:focus {
+    outline: none;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+svg {
+    fill: currentColor;
+}
